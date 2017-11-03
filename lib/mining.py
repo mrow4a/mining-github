@@ -10,6 +10,8 @@ class Miner:
     SCALA = "scala"
     PYTHON = "python"
 
+    repos = set()
+
     def __init__(self, user, password):
         self.logfile = os.path.dirname(os.path.realpath(__file__)) + "/results.log"
         self.auth = Github(user, password)
@@ -19,9 +21,11 @@ class Miner:
         for i in range(0,paged_results.totalCount):
             page = paged_results.get_page(i)
             for res in page:
-                json_line = json.dumps({"name": res.repository.full_name, "id": res.repository.id})
-                print json_line
-                file.write(json_line + '\n')
+                if not res.repository.id in repos:
+                    json_line = json.dumps({"name": res.repository.full_name, "id": res.repository.id})
+                    repos.add(res.repository.id)
+                    print json_line
+                    file.write(json_line + '\n')
             #print pages
             time.sleep(2)
         file.close()
