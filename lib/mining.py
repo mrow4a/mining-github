@@ -18,14 +18,20 @@ class Miner:
 
     def get_results(self, paged_results):
         file = open(self.logfile, 'w')
-        for i in range(0,paged_results.totalCount):
-            page = paged_results.get_page(i)
-            for res in page:
-                if not res.repository.id in repos:
-                    json_line = json.dumps({"name": res.repository.full_name, "id": res.repository.id})
-                    repos.add(res.repository.id)
-                    print json_line
-                    file.write(json_line + '\n')
+        to_visit = Queue()
+        for res in paged_results:
+            to_visit.put(res.repository.id)
+        while not to_visit.empty():
+            repo_id = to_visit.get()
+            if not repo_id in repos:
+                repos.add(repo_id)
+                res = self.auth.get_repo(repo_id)
+                fork_pages = res.get_forks()
+                for fork in fork_pages:
+                    to_visit.put(fork.id)
+                json_line = json.dumps({"name": res.full_name, "id": res.id})
+                print json_line
+                file.write(json_line + '\n')
             #print pages
             time.sleep(2)
         file.close()
