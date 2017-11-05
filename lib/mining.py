@@ -3,6 +3,7 @@
 from github import Github
 import os, json
 import time
+import Queue
 
 class Miner:
 
@@ -18,13 +19,16 @@ class Miner:
 
     def get_results(self, paged_results):
         file = open(self.logfile, 'w')
-        to_visit = Queue()
+        to_visit = Queue.Queue()
         for res in paged_results:
             to_visit.put(res.repository.id)
+            print res.repository.id
+            time.sleep(0.1)
         while not to_visit.empty():
+            print "-----------------STARTING DEPTHSEARCH-------------------"
             repo_id = to_visit.get()
-            if not repo_id in repos:
-                repos.add(repo_id)
+            if not repo_id in self.repos:
+                self.repos.add(repo_id)
                 res = self.auth.get_repo(repo_id)
                 fork_pages = res.get_forks()
                 for fork in fork_pages:
