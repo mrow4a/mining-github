@@ -15,7 +15,7 @@ class Miner:
 
     def __init__(self, user, password):
         self.logfile = os.path.dirname(os.path.realpath(__file__)) + "/results.log"
-        self.auth = Github(user, password)
+        self.auth = Github(user, password, per_page = 100)
 
     def get_results(self, paged_results):
         file = open(self.logfile, 'w')
@@ -23,9 +23,8 @@ class Miner:
         for res in paged_results:
             to_visit.put(res.repository.id)
             print res.repository.id
-            time.sleep(0.1)
+            time.sleep(0.04)
         while not to_visit.empty():
-            print "-----------------STARTING DEPTHSEARCH-------------------"
             repo_id = to_visit.get()
             if not repo_id in self.repos:
                 self.repos.add(repo_id)
@@ -33,11 +32,14 @@ class Miner:
                 fork_pages = res.get_forks()
                 for fork in fork_pages:
                     to_visit.put(fork.id)
-                json_line = json.dumps({"name": res.full_name, "id": res.id})
+                json_line = json.dumps({"name": res.full_name, "id": res.id,
+                    "network_count": res.network_count, "stargazers_count": res.stargazers_count,
+                    "subscribers_count": res.subscribers_count, "watchers_count": res.watchers_count,
+                    "open_issues_count": res.open_issues_count})
                 print json_line
                 file.write(json_line + '\n')
             #print pages
-            time.sleep(2)
+            time.sleep(0.73)
         file.close()
 
         print "WROTE URLS TO %s"%(self.logfile)
