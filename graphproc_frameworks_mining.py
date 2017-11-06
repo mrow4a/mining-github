@@ -7,6 +7,7 @@ import getopt
 import sys
 import lib.mining
 import getpass
+import os
 
 def print_help():
     print ('Please supply with Github username and password')
@@ -30,8 +31,32 @@ def main(argv):
         username = raw_input("Username: ")
         password = getpass.getpass("Password for " + username + ": ")
 
-    miner = lib.mining.Miner(username, password)
-    miner.get_repos_for_keyword("import org.apache.flink.gelly", miner.JAVA)
+    # Set username, password and output directory
+    outputdir = os.path.dirname(os.path.realpath(__file__))
+    miner = lib.mining.Miner(username, password, outputdir)
+
+    # Start searching for keyword
+
+    miner.clear_results("gelly")
+    miner.get_repos_for_keyword(
+        "import org.apache.flink.graph",
+        [miner.JAVA, miner.SCALA],
+        "gelly"
+    )
+
+    miner.clear_results("graphx")
+    miner.get_repos_for_keyword(
+        "import org.apache.spark.graphx",
+        [miner.JAVA, miner.SCALA],
+        "graphx"
+    )
+
+    miner.clear_results("giraph")
+    miner.get_repos_for_keyword(
+        "import org.apache.giraph",
+        [miner.JAVA, miner.SCALA],
+        "giraph"
+    )
 
 
 if __name__ == '__main__':

@@ -1,9 +1,10 @@
 #!/usr/bin/env python
 
 from github import Github
-import os, json
+import json
 import time
 import Queue
+import os
 
 class Miner:
 
@@ -13,17 +14,33 @@ class Miner:
 
     repos = set()
 
-    def __init__(self, user, password):
-        self.logfile = os.path.dirname(os.path.realpath(__file__)) + "/results.log"
+    def __init__(self, user, password, outputdir):
+        self.logfiledir = outputdir
         self.auth = Github(user, password, per_page = 100)
+        self.suffix = '.log'
 
-    def get_results(self, paged_results):
-        file = open(self.logfile, 'w')
+    def __get_output_for_id(self, outid):
+        return os.path.join(self.logfiledir, outid + self.suffix)
+
+    def clear_results(self, outid):
+        outputfile = self.__get_output_for_id(outid)
+        open(outputfile, 'w').close()
+
+    def __write_results(self, paged_results, outid):
+        outputfile = self.__get_output_for_id(outid)
+        file = open(outputfile, 'a')
+
         to_visit = Queue.Queue()
+        count = 0
         for res in paged_results:
             to_visit.put(res.repository.id)
             print res.repository.id
-            time.sleep(0.04)
+            time.sleep(0.1)
+            count = count +1
+            if count > 10:
+                break
+
+
         while not to_visit.empty():
             repo_id = to_visit.get()
             if not repo_id in self.repos:
@@ -42,14 +59,23 @@ class Miner:
             time.sleep(0.73)
         file.close()
 
-        print "WROTE URLS TO %s"%(self.logfile)
+        print "WROTE URLS TO %s"%(outputfile)
 
-    def get_repos_for_keyword(self, keyword, language):
-        if (language not in [self.JAVA, self.SCALA, self.PYTHON]):
-            print("WRONG LANGUAGE - Please use Miner.JAVA | Miner.SCALA | Miner.PYTHON")
-            return
-        print('Mining ' + keyword + '...')
+    def get_repos_for_keyword(self, keyword, languages, id):
+        # Validate languages are supported
+        for language in languages:
+            if (language not in [self.JAVA, self.SCALA, self.PYTHON]):
+                print("LANGUAGE NOT SUPPORTED- Please use Miner.JAVA | Miner.SCALA | Miner.PYTHON")
+                return
+
+        # Escape keyword to make it unique search
+        escaped_keyword = "\"" + keyword + "\""
+        print('Mining ' + escaped_keyword + '...')
         print
 
-        paged_results = self.auth.search_code(keyword)
-        self.get_results(paged_results)
+        # Get results for each language
+        for language in languages:
+            paged_results = self.auth.search_code(
+                escaped_keyword, language=language
+            )
+            self.__write_results(paged_results, id)
