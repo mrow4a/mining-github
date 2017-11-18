@@ -10,22 +10,34 @@ import getpass
 import os
 
 def print_help():
-    print ('Please supply with Github username and password')
-    print ('./graphproc_frameworks_mining.py -u <username> -d <password>')
+    print ('Please supply with Github username and password, and optionaly --clear flag to reset result for framework')
+    print ('./graphproc_frameworks_mining.py -u <username> -d <password> [gelly/graphx/giraph/tinkerpop/arabesque/graphlab]')
+    print ('./graphproc_frameworks_mining.py -u foo -d foopass gelly')
+    print ('./graphproc_frameworks_mining.py gelly')
+    print ('./graphproc_frameworks_mining.py --clear gelly')
 
 def main(argv):
     try:
-        opts, args = getopt.getopt(argv, "u:p:", ["user", "password"])
+        opts, args = getopt.getopt(argv, "u:p:c", ["user", "password", "clear"])
     except getopt.GetoptError:
+        print_help()
         sys.exit(2)
+
+    if (len(args)) < 1:
+        print_help()
+        sys.exit(2)
+    framework = args[0]
 
     username = None
     password = None
+    clear = False
     for opt, arg in opts:
         if opt in ("-u", "--user"):
             username = arg
         elif opt in ("-p", "--password"):
             password = arg
+        elif opt in ("-c", "--clear"):
+            clear = True
 
     if (username is None or password is None):
         username = raw_input("Username: ")
@@ -37,27 +49,67 @@ def main(argv):
 
     # Start searching for keyword
 
-    miner.clear_results("gelly")
-    miner.get_repos_for_keyword(
-        "import org.apache.flink.graph",
-        [miner.JAVA, miner.SCALA],
-        "gelly"
-    )
+    if clear:
+        miner.clear_results(framework)
 
-    miner.clear_results("graphx")
-    miner.get_repos_for_keyword(
-        "import org.apache.spark.graphx",
-        [miner.JAVA, miner.SCALA],
-        "graphx"
-    )
-
-    miner.clear_results("giraph")
-    miner.get_repos_for_keyword(
-        "import org.apache.giraph",
-        [miner.JAVA, miner.SCALA],
-        "giraph"
-    )
-
+    if framework == "gelly":
+        miner.get_repos_for_keyword(
+            "import org.apache.flink.graph",
+            [miner.JAVA, miner.SCALA],
+            framework
+        )
+    elif framework == "graphx":
+        miner.get_repos_for_keyword(
+            "import org.apache.spark.graphx",
+            [miner.JAVA, miner.SCALA],
+            framework
+        )
+    elif framework == "giraph":
+        miner.get_repos_for_keyword(
+            "import org.apache.giraph.graph",
+            [miner.JAVA, miner.SCALA],
+            framework
+        )
+    elif framework == "tinkerpop":
+        miner.get_repos_for_keyword(
+            "import org.apache.tinkerpop.gremlin.process.traversal.dsl.graph",
+            [miner.JAVA, miner.SCALA],
+            framework
+        )
+        miner.get_repos_for_keyword(
+            "import org.apache.tinkerpop.gremlin.structure.io.graphml",
+            [miner.JAVA, miner.SCALA],
+            framework
+        )
+        miner.get_repos_for_keyword(
+            "import org.apache.tinkerpop.gremlin.structure.Graph",
+            [miner.JAVA, miner.SCALA],
+            framework
+        )
+    elif framework == "arabesque":
+        miner.get_repos_for_keyword(
+            "import io.arabesque",
+            [miner.JAVA, miner.SCALA],
+            framework
+        )
+    elif framework == "graphlab":
+        miner.get_repos_for_keyword(
+            "import graphlab.graph",
+            [miner.JAVA, miner.SCALA],
+            framework
+        )
+        miner.get_repos_for_keyword(
+            "from graphlab import SGraph",
+            [miner.PYTHON],
+            framework
+        )
+        miner.get_repos_for_keyword(
+            "graphlab.SGraph",
+            [miner.PYTHON],
+            framework
+        )
+    else:
+        print_help()
 
 if __name__ == '__main__':
     main(sys.argv[1:])
