@@ -27,6 +27,42 @@ class Miner:
         outputfile = self.__get_output_for_id(outid)
         open(outputfile, 'w').close()
 
+    def get_contrib(self, res):
+        contrib_pages = res.get_contributors()
+
+        print "Fetch contributors for", res.full_name
+        contribs = []
+        for i in range(0, 10000):
+            try:
+                page = contrib_pages.get_page(i)
+                if not page:
+                    break
+                for contrib in page:
+                    contribs.append(contrib.login)
+                time.sleep(0.1)
+            except Exception as e:
+                print e
+
+        return contribs
+
+    def get_forks(self, res):
+        fork_pages = res.get_forks()
+
+        print "Fetch forks for", res.full_name
+        forks = []
+        for i in range(0, 10000):
+            try:
+                page = fork_pages.get_page(i)
+                if not page:
+                    break
+                for fork in page:
+                    forks.append(fork)
+                time.sleep(0.1)
+            except Exception as e:
+                print e
+
+        return forks
+
     def __write_results(self, paged_results, outid):
         outputfile = self.__get_output_for_id(outid)
         file = open(outputfile, 'a')
@@ -47,33 +83,24 @@ class Miner:
                 print "Fetch ", repo_id
                 try:
                     res = self.auth.get_repo(repo_id)
+                    forks = self.get_forks(res)
+                    for fork in forks:
+                        to_visit.put(fork.id)
+
+                    contributors = self.get_contrib(res)
+
+                    json_line = json.dumps({"name": res.full_name, "id": res.id,
+                        "stargazers_count": res.stargazers_count,
+                        "subscribers_count": res.subscribers_count,
+                        "contributors": contributors,
+                        "open_issues_count": res.open_issues_count})
+                    print json_line
+                    file.write(json_line + '\n')
+                    time.sleep(0.73)
                 except Exception as e:
                     print e
                     continue
 
-                fork_pages = res.get_forks()
-
-                if fork_pages.totalCount is None:
-                    total_forks = 0
-                else:
-                    total_forks = fork_pages.totalCount
-
-                print "Fetch forks for", res.id, "with count", total_forks
-                for i in range(0, total_forks):
-                    try:
-                        fork = fork_pages.get_page(i)
-                        to_visit.put(fork.id)
-                    except Exception as e:
-                        print e
-
-                json_line = json.dumps({"name": res.full_name, "id": res.id,
-                    "stargazers_count": res.stargazers_count,
-                    "subscribers_count": res.subscribers_count,
-                    "open_issues_count": res.open_issues_count})
-                print json_line
-                file.write(json_line + '\n')
-                #print pages
-                time.sleep(0.73)
             else:
                 filtered_out += 1
         file.close()

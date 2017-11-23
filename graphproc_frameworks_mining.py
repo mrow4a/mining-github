@@ -104,6 +104,15 @@ def main(argv):
             [miner.JAVA, miner.SCALA],
             "arabesque"
         )
+    if framework == "goffish" or framework == "all":
+        if clean:
+            miner.clear_results("goffish")
+
+        miner.get_repos_for_keyword(
+            "import in.dream_lab.goffish",
+            [miner.JAVA],
+            "goffish"
+        )
     if framework == "graphlab" or framework == "all":
         if clean:
             miner.clear_results("graphlab")
