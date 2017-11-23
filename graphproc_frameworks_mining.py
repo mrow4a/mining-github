@@ -11,7 +11,7 @@ import os
 
 def print_help():
     print ('Please supply with Github username and password, and optionaly --clear flag to reset result for framework')
-    print ('./graphproc_frameworks_mining.py -u <username> -d <password> [gelly/graphx/giraph/tinkerpop/arabesque/graphlab]')
+    print ('./graphproc_frameworks_mining.py -u <username> -d <password> [all/gelly/graphx/giraph/tinkerpop/arabesque/graphlab]')
     print ('./graphproc_frameworks_mining.py -u foo -d foopass gelly')
     print ('./graphproc_frameworks_mining.py gelly')
     print ('./graphproc_frameworks_mining.py --cleanrun gelly')
@@ -49,69 +49,84 @@ def main(argv):
 
     # Start searching for keyword
 
-    if clean:
-        miner.clear_results(framework)
+    if framework == "gelly" or framework == "all":
+        if clean:
+            miner.clear_results("gelly")
 
-    if framework == "gelly":
         miner.get_repos_for_keyword(
             "import org.apache.flink.graph",
             [miner.JAVA, miner.SCALA],
-            framework
+            "gelly"
         )
-    elif framework == "graphx":
+    elif framework == "graphx" or framework == "all":
+        if clean:
+            miner.clear_results("graphx")
+
         miner.get_repos_for_keyword(
             "import org.apache.spark.graphx",
             [miner.JAVA, miner.SCALA],
-            framework
+            "graphx"
         )
-    elif framework == "giraph":
+    elif framework == "giraph" or framework == "all":
+        if clean:
+            miner.clear_results("giraph")
+
         miner.get_repos_for_keyword(
             "import org.apache.giraph.graph",
             [miner.JAVA, miner.SCALA],
-            framework
+            "giraph"
         )
-    elif framework == "tinkerpop":
+    elif framework == "tinkerpop" or framework == "all":
+        if clean:
+            miner.clear_results("tinkerpop")
+
         miner.get_repos_for_keyword(
             "import org.apache.tinkerpop.gremlin.process.traversal.dsl.graph",
             [miner.JAVA, miner.SCALA],
-            framework
+            "tinkerpop"
         )
         miner.get_repos_for_keyword(
             "import org.apache.tinkerpop.gremlin.structure.io.graphml",
             [miner.JAVA, miner.SCALA],
-            framework
+            "tinkerpop"
         )
         miner.get_repos_for_keyword(
             "import org.apache.tinkerpop.gremlin.structure.Graph",
             [miner.JAVA, miner.SCALA],
-            framework
+            "tinkerpop"
         )
-    elif framework == "arabesque":
+    elif framework == "arabesque" or framework == "all":
+        if clean:
+            miner.clear_results("arabesque")
+
         miner.get_repos_for_keyword(
             "import io.arabesque",
             [miner.JAVA, miner.SCALA],
-            framework
+            "arabesque"
         )
-    elif framework == "graphlab":
+    elif framework == "graphlab" or framework == "all":
+        if clean:
+            miner.clear_results("graphlab")
+
         miner.get_repos_for_keyword(
             "import graphlab.graph",
             [miner.JAVA, miner.SCALA],
-            framework
+            "graphlab"
         )
         miner.get_repos_for_keyword(
             "from graphlab import SGraph",
             [miner.PYTHON],
-            framework
+            "graphlab"
         )
         miner.get_repos_for_keyword(
             "graphlab.SGraph",
             [miner.PYTHON],
-            framework
+            "graphlab"
         )
         miner.get_repos_for_keyword(
-            "#include <graphlab.hpp>",
+            "<graphlab.hpp>",
             [miner.CPLUS],
-            framework
+            "graphlab"
         )
 
     else:
