@@ -108,6 +108,12 @@ def main(argv):
             [miner.PYTHON],
             framework
         )
+        miner.get_repos_for_keyword(
+            "#include <graphlab.hpp>",
+            [miner.CPLUS],
+            framework
+        )
+
     else:
         print_help()
 
