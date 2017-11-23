@@ -21,6 +21,17 @@ Without prompt:
 ./graphproc_frameworks_mining.py
 ```
 
+The above will display help message on how to use this repository
+
+```
+Please supply with Github username and password, and optionaly --cleanrun flag to reset result for framework
+./graphproc_frameworks_mining.py -u <username> -d <password> [all/gelly/graphx/giraph/tinkerpop/arabesque/graphlab]
+./graphproc_frameworks_mining.py -u foo -d foopass gelly
+./graphproc_frameworks_mining.py gelly
+./graphproc_frameworks_mining.py --cleanrun gelly
+./graphproc_frameworks_mining.py --cleanrun all
+```
+
 #### Prerequisites
 
 To start with, run the following after checking out your branch:

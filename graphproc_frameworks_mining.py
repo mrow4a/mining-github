@@ -10,7 +10,7 @@ import getpass
 import os
 
 def print_help():
-    print ('Please supply with Github username and password, and optionaly --clear flag to reset result for framework')
+    print ('Please supply with Github username and password, and optionaly --cleanrun flag to reset result for framework')
     print ('./graphproc_frameworks_mining.py -u <username> -d <password> [all/gelly/graphx/giraph/tinkerpop/arabesque/graphlab]')
     print ('./graphproc_frameworks_mining.py -u foo -d foopass gelly')
     print ('./graphproc_frameworks_mining.py gelly')
@@ -58,7 +58,7 @@ def main(argv):
             [miner.JAVA, miner.SCALA],
             "gelly"
         )
-    elif framework == "graphx" or framework == "all":
+    if framework == "graphx" or framework == "all":
         if clean:
             miner.clear_results("graphx")
 
@@ -67,7 +67,7 @@ def main(argv):
             [miner.JAVA, miner.SCALA],
             "graphx"
         )
-    elif framework == "giraph" or framework == "all":
+    if framework == "giraph" or framework == "all":
         if clean:
             miner.clear_results("giraph")
 
@@ -76,7 +76,7 @@ def main(argv):
             [miner.JAVA, miner.SCALA],
             "giraph"
         )
-    elif framework == "tinkerpop" or framework == "all":
+    if framework == "tinkerpop" or framework == "all":
         if clean:
             miner.clear_results("tinkerpop")
 
@@ -95,7 +95,7 @@ def main(argv):
             [miner.JAVA, miner.SCALA],
             "tinkerpop"
         )
-    elif framework == "arabesque" or framework == "all":
+    if framework == "arabesque" or framework == "all":
         if clean:
             miner.clear_results("arabesque")
 
@@ -104,7 +104,7 @@ def main(argv):
             [miner.JAVA, miner.SCALA],
             "arabesque"
         )
-    elif framework == "graphlab" or framework == "all":
+    if framework == "graphlab" or framework == "all":
         if clean:
             miner.clear_results("graphlab")
 
@@ -128,9 +128,6 @@ def main(argv):
             [miner.CPLUS],
             "graphlab"
         )
-
-    else:
-        print_help()
 
 if __name__ == '__main__':
     main(sys.argv[1:])
