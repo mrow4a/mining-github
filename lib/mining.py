@@ -65,8 +65,8 @@ class Miner:
                         print e
 
                 json_line = json.dumps({"name": res.full_name, "id": res.id,
-                    "network_count": res.network_count, "stargazers_count": res.stargazers_count,
-                    "subscribers_count": res.subscribers_count, "watchers_count": res.watchers_count,
+                    "stargazers_count": res.stargazers_count,
+                    "subscribers_count": res.subscribers_count,
                     "open_issues_count": res.open_issues_count})
                 print json_line
                 file.write(json_line + '\n')
