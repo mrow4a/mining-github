@@ -31,14 +31,10 @@ class Miner:
         file = open(outputfile, 'a')
 
         to_visit = Queue.Queue()
-        count = 0
         for res in paged_results:
             to_visit.put(res.repository.id)
             print res.repository.id
             time.sleep(0.1)
-            count = count +1
-            if count > 10:
-                break
 
 
         while not to_visit.empty():

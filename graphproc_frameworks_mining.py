@@ -14,11 +14,11 @@ def print_help():
     print ('./graphproc_frameworks_mining.py -u <username> -d <password> [gelly/graphx/giraph/tinkerpop/arabesque/graphlab]')
     print ('./graphproc_frameworks_mining.py -u foo -d foopass gelly')
     print ('./graphproc_frameworks_mining.py gelly')
-    print ('./graphproc_frameworks_mining.py --clear gelly')
+    print ('./graphproc_frameworks_mining.py --cleanrun gelly')
 
 def main(argv):
     try:
-        opts, args = getopt.getopt(argv, "u:p:c", ["user", "password", "clear"])
+        opts, args = getopt.getopt(argv, "u:p:c", ["user", "password", "cleanrun"])
     except getopt.GetoptError:
         print_help()
         sys.exit(2)
@@ -30,14 +30,14 @@ def main(argv):
 
     username = None
     password = None
-    clear = False
+    clean = False
     for opt, arg in opts:
         if opt in ("-u", "--user"):
             username = arg
         elif opt in ("-p", "--password"):
             password = arg
-        elif opt in ("-c", "--clear"):
-            clear = True
+        elif opt in ("-c", "--cleanrun"):
+            clean = True
 
     if (username is None or password is None):
         username = raw_input("Username: ")
@@ -49,7 +49,7 @@ def main(argv):
 
     # Start searching for keyword
 
-    if clear:
+    if clean:
         miner.clear_results(framework)
 
     if framework == "gelly":
