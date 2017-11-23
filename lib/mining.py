@@ -37,6 +37,7 @@ class Miner:
             print res.repository.id
             time.sleep(0.1)
 
+        filtered_out = 0
 
         while not to_visit.empty():
             repo_id = to_visit.get()
@@ -73,7 +74,10 @@ class Miner:
                 file.write(json_line + '\n')
                 #print pages
                 time.sleep(0.73)
+            else:
+                filtered_out += 1
         file.close()
+        print("Filtered out " + str(filtered_out))
 
         print "WROTE URLS TO %s"%(outputfile)
 
