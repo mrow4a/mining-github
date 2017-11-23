@@ -11,6 +11,7 @@ class Miner:
     JAVA = "java"
     SCALA = "scala"
     PYTHON = "python"
+    CPLUS = "c++"
 
     repos = set()
 
@@ -79,8 +80,8 @@ class Miner:
     def get_repos_for_keyword(self, keyword, languages, id):
         # Validate languages are supported
         for language in languages:
-            if (language not in [self.JAVA, self.SCALA, self.PYTHON]):
-                print("LANGUAGE NOT SUPPORTED- Please use Miner.JAVA | Miner.SCALA | Miner.PYTHON")
+            if (language not in [self.JAVA, self.SCALA, self.PYTHON, self.CPLUS]):
+                print("LANGUAGE NOT SUPPORTED- Please use Miner.JAVA | Miner.SCALA | Miner.PYTHON | Miner.CPLUS")
                 return
 
         # Escape keyword to make it unique search
