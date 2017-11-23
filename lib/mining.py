@@ -41,18 +41,37 @@ class Miner:
             repo_id = to_visit.get()
             if not repo_id in self.repos:
                 self.repos.add(repo_id)
-                res = self.auth.get_repo(repo_id)
+
+                print "Fetch ", repo_id
+                try:
+                    res = self.auth.get_repo(repo_id)
+                except Exception as e:
+                    print e
+                    continue
+
                 fork_pages = res.get_forks()
-                for fork in fork_pages:
-                    to_visit.put(fork.id)
+
+                if fork_pages.totalCount is None:
+                    total_forks = 0
+                else:
+                    total_forks = fork_pages.totalCount
+
+                print "Fetch forks for", res.id, "with count", total_forks
+                for i in range(0, total_forks):
+                    try:
+                        fork = fork_pages.get_page(i)
+                        to_visit.put(fork.id)
+                    except Exception as e:
+                        print e
+
                 json_line = json.dumps({"name": res.full_name, "id": res.id,
                     "network_count": res.network_count, "stargazers_count": res.stargazers_count,
                     "subscribers_count": res.subscribers_count, "watchers_count": res.watchers_count,
                     "open_issues_count": res.open_issues_count})
                 print json_line
                 file.write(json_line + '\n')
-            #print pages
-            time.sleep(0.73)
+                #print pages
+                time.sleep(0.73)
         file.close()
 
         print "WROTE URLS TO %s"%(outputfile)
