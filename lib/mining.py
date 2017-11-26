@@ -27,6 +27,25 @@ class Miner:
         outputfile = self.__get_output_for_id(outid)
         open(outputfile, 'w').close()
 
+
+    def get_issues_count(self, res):
+        issues_pages = res.get_issues(state="all")
+
+        print "Fetch issues for", res.full_name
+        count = 0
+        for i in range(0, 10000):
+            try:
+                page = issues_pages.get_page(i)
+                if not page:
+                    break
+                for issue in page:
+                    count = count +1
+                time.sleep(0.1)
+            except Exception as e:
+                print e
+
+        return count
+
     def get_contrib(self, res):
         contrib_pages = res.get_contributors()
 
@@ -88,12 +107,13 @@ class Miner:
                         to_visit.put(fork.id)
 
                     contributors = self.get_contrib(res)
+                    issues_count = self.get_issues_count(res)
 
                     json_line = json.dumps({"name": res.full_name, "id": res.id,
                         "stargazers_count": res.stargazers_count,
                         "subscribers_count": res.subscribers_count,
                         "contributors": contributors,
-                        "open_issues_count": res.open_issues_count})
+                        "issues_count": issues_count})
                     print json_line
                     file.write(json_line + '\n')
                     time.sleep(0.73)
