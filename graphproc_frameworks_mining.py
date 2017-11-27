@@ -67,6 +67,11 @@ def main(argv):
             [miner.JAVA, miner.SCALA],
             "graphx"
         )
+        miner.get_repos_for_keyword(
+            "import org.apache.spark.graphx.GraphLoader",
+            [miner.SCALA],
+            "graphx"
+        )
     if framework == "giraph" or framework == "all":
         if clean:
             miner.clear_results("giraph")

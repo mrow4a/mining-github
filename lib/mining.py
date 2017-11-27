@@ -26,7 +26,7 @@ class Miner:
     def clear_results(self, outid):
         outputfile = self.__get_output_for_id(outid)
         open(outputfile, 'w').close()
-
+        self.repos = set()
 
     def get_issues_count(self, res):
         issues_pages = res.get_issues(state="all")
