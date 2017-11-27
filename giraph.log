@@ -1,8 +1,10 @@
 {"issues_count": 0, "name": "aksish/super-man", "contributors": ["aksish"], "subscribers_count": 1, "stargazers_count": 0, "id": 28443480}
-{"issues_count": 31, "name": "rayokota/hgraphdb", "contributors": ["rayokota", "mbrukman"], "subscribers_count": 21, "stargazers_count": 89, "id": 73235061}
+{"issues_count": 0, "name": "d-behi/thesis", "contributors": [], "subscribers_count": 1, "stargazers_count": 1, "id": 26856183}
+{"issues_count": 31, "name": "rayokota/hgraphdb", "contributors": ["rayokota", "mbrukman"], "subscribers_count": 21, "stargazers_count": 90, "id": 73235061}
 {"issues_count": 0, "name": "wmoustafa/granada", "contributors": [], "subscribers_count": 2, "stargazers_count": 2, "id": 48838808}
 {"issues_count": 0, "name": "zulkic/giraphApi", "contributors": ["zulkic"], "subscribers_count": 1, "stargazers_count": 0, "id": 58752859}
 {"issues_count": 0, "name": "GraphResearchLab/Graph-Coloring-using-Apache-Giraph", "contributors": ["nishantgandhi99"], "subscribers_count": 1, "stargazers_count": 0, "id": 31452497}
+{"issues_count": 0, "name": "FTSRG/graph-metrics", "contributors": ["Lehel44", "szarnyasg"], "subscribers_count": 4, "stargazers_count": 2, "id": 83038240}
 {"issues_count": 0, "name": "usi-systems/giraph-pagerank", "contributors": ["nelsonje", "riyadparvez"], "subscribers_count": 4, "stargazers_count": 1, "id": 76358455}
 {"issues_count": 0, "name": "manuelcoppotelli/giraph-demo", "contributors": ["manuelcoppotelli"], "subscribers_count": 2, "stargazers_count": 3, "id": 75770519}
 {"issues_count": 4, "name": "amogh09/giraph_research", "contributors": ["amogh09"], "subscribers_count": 0, "stargazers_count": 0, "id": 70399636}
@@ -19,17 +21,17 @@
 {"issues_count": 0, "name": "cosh/PlayingWithGiraph", "contributors": ["cosh"], "subscribers_count": 1, "stargazers_count": 1, "id": 20558519}
 {"issues_count": 0, "name": "JietingYang/Giraph_and_MLlib_Projects", "contributors": ["JietingYang"], "subscribers_count": 1, "stargazers_count": 0, "id": 45768390}
 {"issues_count": 0, "name": "ovarene/giraph_SequenceFileVertexInput", "contributors": ["ovarene"], "subscribers_count": 0, "stargazers_count": 0, "id": 23654814}
-{"issues_count": 0, "name": "rvs/giraph-book", "contributors": ["rvs"], "subscribers_count": 1, "stargazers_count": 0, "id": 42021917}
 {"issues_count": 0, "name": "v1ctor/cloudcomputing", "contributors": ["v1ctor"], "subscribers_count": 1, "stargazers_count": 0, "id": 85096030}
+{"issues_count": 0, "name": "rvs/giraph-book", "contributors": ["rvs"], "subscribers_count": 1, "stargazers_count": 0, "id": 42021917}
 {"issues_count": 1, "name": "smitbose/giraph-utils", "contributors": ["smitbose"], "subscribers_count": 1, "stargazers_count": 0, "id": 60413556}
 {"issues_count": 0, "name": "AlexandrShcherbakov/RBM", "contributors": ["AlexandrShcherbakov"], "subscribers_count": 1, "stargazers_count": 0, "id": 65496004}
 {"issues_count": 0, "name": "Apress/practical-graph-analytics-w-apache-giraph", "contributors": ["gwens"], "subscribers_count": 1, "stargazers_count": 4, "id": 71340759}
 {"issues_count": 1, "name": "dream-lab/SE256-JAN2016", "contributors": ["ImbesatRizvi", "Robin10155"], "subscribers_count": 7, "stargazers_count": 0, "id": 57434972}
 {"issues_count": 0, "name": "AbbeWang/Giraph", "contributors": ["AbbeWang"], "subscribers_count": 1, "stargazers_count": 0, "id": 43866037}
 {"issues_count": 0, "name": "Team3iisc/PushTest", "contributors": [], "subscribers_count": 1, "stargazers_count": 0, "id": 57619673}
-{"issues_count": 1, "name": "dudzikmichal/giraph-tutorial", "contributors": ["dudzikmichal"], "subscribers_count": 1, "stargazers_count": 0, "id": 76181500}
-{"issues_count": 0, "name": "przybylek/GiraphAndMllib", "contributors": ["przybylek"], "subscribers_count": 1, "stargazers_count": 0, "id": 43172877}
 {"issues_count": 0, "name": "tayllan/comparative-study-of-frameworks-for-parallel-processing-of-graphs", "contributors": ["tayllan"], "subscribers_count": 1, "stargazers_count": 5, "id": 37678429}
+{"issues_count": 0, "name": "przybylek/GiraphAndMllib", "contributors": ["przybylek"], "subscribers_count": 1, "stargazers_count": 0, "id": 43172877}
+{"issues_count": 1, "name": "dudzikmichal/giraph-tutorial", "contributors": ["dudzikmichal"], "subscribers_count": 1, "stargazers_count": 0, "id": 76181500}
 {"issues_count": 0, "name": "eldereal/gpath", "contributors": ["eldereal"], "subscribers_count": 1, "stargazers_count": 0, "id": 7269541}
 {"issues_count": 0, "name": "shivinm/cloudApps", "contributors": ["shivinm"], "subscribers_count": 1, "stargazers_count": 0, "id": 42139287}
 {"issues_count": 0, "name": "RerRayne/simple-giraph-project", "contributors": [], "subscribers_count": 1, "stargazers_count": 0, "id": 63240289}
@@ -57,8 +59,8 @@
 {"issues_count": 0, "name": "aleksandrpak/solutions", "contributors": ["aleksandrpak"], "subscribers_count": 3, "stargazers_count": 7, "id": 40436626}
 {"issues_count": 2, "name": "zihaolucky/data-science-in-action", "contributors": ["zihaolucky"], "subscribers_count": 15, "stargazers_count": 38, "id": 36588521}
 {"issues_count": 0, "name": "mythstack/Hadoop-Real-World-Solutions-Cookbook-Example-Code", "contributors": ["mythstack"], "subscribers_count": 1, "stargazers_count": 1, "id": 30491388}
-{"issues_count": 17, "name": "grafos-ml/okapi", "contributors": ["marsty5", "mumas", "vasia", "dlogothetis", "AlexJF", "claudiomartella", "whitespeaker"], "subscribers_count": 17, "stargazers_count": 69, "id": 16482993}
 {"issues_count": 0, "name": "ianbuss/giraph-target-paths", "contributors": ["ianbuss"], "subscribers_count": 1, "stargazers_count": 0, "id": 18376324}
+{"issues_count": 17, "name": "grafos-ml/okapi", "contributors": ["marsty5", "mumas", "vasia", "dlogothetis", "AlexJF", "claudiomartella", "whitespeaker"], "subscribers_count": 17, "stargazers_count": 69, "id": 16482993}
 {"issues_count": 0, "name": "difujia/Graph-Inflater", "contributors": ["difujia"], "subscribers_count": 0, "stargazers_count": 0, "id": 26149703}
 {"issues_count": 0, "name": "aaronice/CloudComputingApplication", "contributors": ["aaronice"], "subscribers_count": 0, "stargazers_count": 0, "id": 61790957}
 {"issues_count": 0, "name": "alexgulida/cloudapp-mp5", "contributors": ["xldrx", "alexgulida"], "subscribers_count": 1, "stargazers_count": 0, "id": 43142742}
@@ -72,27 +74,29 @@
 {"issues_count": 0, "name": "amitchmca/hadooparchitecturebook", "contributors": ["markgrover", "jseidman", "gwenshap"], "subscribers_count": 1, "stargazers_count": 1, "id": 76832406}
 {"issues_count": 0, "name": "dcrankshaw/giraph", "contributors": ["aching", "jghoman", "ereisman", "claudiomartella", "nitay", "hyunsik", "omalley", "dcrankshaw", "rvs", "xslogic", "jakemannix"], "subscribers_count": 1, "stargazers_count": 0, "id": 15015255}
 {"issues_count": 0, "name": "ZhouYii/ReactiveGiraph", "contributors": ["ZhouYii"], "subscribers_count": 3, "stargazers_count": 1, "id": 32104122}
-{"issues_count": 0, "name": "2011aad/Cloud-Computing-Application--Coursera-Assignments", "contributors": ["2011aad"], "subscribers_count": 1, "stargazers_count": 0, "id": 57015928}
 {"issues_count": 0, "name": "redondo-mk/coursera", "contributors": ["redondo-mk"], "subscribers_count": 0, "stargazers_count": 0, "id": 38977904}
+{"issues_count": 0, "name": "2011aad/Cloud-Computing-Application--Coursera-Assignments", "contributors": ["2011aad"], "subscribers_count": 1, "stargazers_count": 0, "id": 57015928}
+{"issues_count": 0, "name": "graetzer/Pregel-Bench", "contributors": ["graetzer"], "subscribers_count": 1, "stargazers_count": 0, "id": 77257345}
 {"issues_count": 1, "name": "rizaon/giraph-cs330", "contributors": ["aching", "jghoman", "ereisman", "claudiomartella", "nitay", "hyunsik", "omalley", "rvs", "xslogic", "jakemannix"], "subscribers_count": 2, "stargazers_count": 0, "id": 18497188}
 {"issues_count": 0, "name": "GraphExperiments/Giraph", "contributors": ["rezanouri87", "ebtesamOmari"], "subscribers_count": 2, "stargazers_count": 1, "id": 33034083}
 {"issues_count": 0, "name": "mauricesaliba/bigdata_dbpl", "contributors": ["mauricesaliba"], "subscribers_count": 1, "stargazers_count": 0, "id": 76665088}
 {"issues_count": 0, "name": "boonchu/cloud_service_app", "contributors": ["boonchu", "xldrx"], "subscribers_count": 1, "stargazers_count": 0, "id": 41954869}
 {"issues_count": 5, "name": "hadooparchitecturebook/hadoop-arch-book", "contributors": ["markgrover", "jseidman", "gwenshap"], "subscribers_count": 36, "stargazers_count": 103, "id": 21082672}
-{"issues_count": 0, "name": "tjj5036/kcore-giraph", "contributors": ["tjj5036"], "subscribers_count": 0, "stargazers_count": 0, "id": 23745250}
+{"issues_count": 0, "name": "bsachin207/GraphX-Giraph-Report", "contributors": ["bsachin207"], "subscribers_count": 1, "stargazers_count": 0, "id": 95181158}
 {"issues_count": 0, "name": "fabcouwer/webdatamanagement", "contributors": ["mjrvandorth", "fabcouwer"], "subscribers_count": 2, "stargazers_count": 0, "id": 19070367}
+{"issues_count": 0, "name": "tjj5036/kcore-giraph", "contributors": ["tjj5036"], "subscribers_count": 0, "stargazers_count": 0, "id": 23745250}
 {"issues_count": 0, "name": "w516161578/Graph-Inflater", "contributors": ["difujia"], "subscribers_count": 1, "stargazers_count": 0, "id": 18044868}
 {"issues_count": 0, "name": "korsvanloon/giraph", "contributors": ["aching", "jghoman", "ereisman", "pavanka", "claudiomartella", "ikabiljo", "rvs", "korsvanloon", "edunov", "nitay", "hyunsik", "omalley", "rubenverboon", "xslogic", "dlogothetis", "jakemannix", "lewismc"], "subscribers_count": 1, "stargazers_count": 0, "id": 37255971}
 {"issues_count": 0, "name": "csdenboer/wdm3", "contributors": ["invalid-email-address"], "subscribers_count": 1, "stargazers_count": 0, "id": 37530059}
 {"issues_count": 0, "name": "GSzpak/pdd", "contributors": ["GSzpak"], "subscribers_count": 2, "stargazers_count": 1, "id": 31565877}
 {"issues_count": 0, "name": "mryorik/machinelearning", "contributors": ["mryorik"], "subscribers_count": 1, "stargazers_count": 0, "id": 40184604}
 {"issues_count": 0, "name": "narulasanam/CloudComputingApplications", "contributors": ["narulasanam"], "subscribers_count": 1, "stargazers_count": 1, "id": 43190229}
-{"issues_count": 2, "name": "renato2099/giraph-gora", "contributors": ["renato2099"], "subscribers_count": 1, "stargazers_count": 4, "id": 11642431}
 {"issues_count": 0, "name": "csastry12/CloudApps", "contributors": ["csastry12"], "subscribers_count": 1, "stargazers_count": 0, "id": 42875309}
 {"issues_count": 0, "name": "Hiromi-nee/netsciasn2", "contributors": ["Hiromi-nee"], "subscribers_count": 1, "stargazers_count": 0, "id": 84444880}
+{"issues_count": 2, "name": "renato2099/giraph-gora", "contributors": ["renato2099"], "subscribers_count": 1, "stargazers_count": 4, "id": 11642431}
 {"issues_count": 0, "name": "bfemiano/big-data-code-examples", "contributors": ["bfemiano"], "subscribers_count": 5, "stargazers_count": 3, "id": 4319965}
-{"issues_count": 2, "name": "dukechain/giraph-1.2", "contributors": ["aching", "jghoman", "edunov", "ereisman", "ikabiljo", "pavanka", "claudiomartella", "heslami", "rvs", "nitay", "hyunsik", "omalley", "dlogothetis", "xslogic", "jakemannix", "lewismc", "mpundir", "tybulut", "yschimke", "dukechain"], "subscribers_count": 1, "stargazers_count": 0, "id": 80866318}
 {"issues_count": 0, "name": "ccare/stretch", "contributors": ["ccare"], "subscribers_count": 1, "stargazers_count": 0, "id": 8110286}
+{"issues_count": 2, "name": "dukechain/giraph-1.2", "contributors": ["aching", "jghoman", "edunov", "ereisman", "ikabiljo", "pavanka", "claudiomartella", "heslami", "rvs", "nitay", "hyunsik", "omalley", "dlogothetis", "xslogic", "jakemannix", "lewismc", "mpundir", "tybulut", "yschimke", "dukechain"], "subscribers_count": 1, "stargazers_count": 0, "id": 80866318}
 {"issues_count": 0, "name": "huangshengbin426/subgraph-listing", "contributors": ["huangshengbin426"], "subscribers_count": 1, "stargazers_count": 0, "id": 82549667}
 {"issues_count": 0, "name": "xvz/giraphuc", "contributors": ["xvz"], "subscribers_count": 1, "stargazers_count": 0, "id": 52235380}
 {"issues_count": 0, "name": "EngAAlex/Giraph-for-GiViP", "contributors": ["EngAAlex"], "subscribers_count": 1, "stargazers_count": 0, "id": 94106547}
@@ -109,7 +113,7 @@
 {"issues_count": 2, "name": "besuikerd/web-data-management", "contributors": ["mjduijn", "besuikerd"], "subscribers_count": 2, "stargazers_count": 0, "id": 34780075}
 {"issues_count": 0, "name": "netj/SmallGraphs", "contributors": ["netj"], "subscribers_count": 1, "stargazers_count": 5, "id": 2952811}
 {"issues_count": 0, "name": "balax85/CloudApplicationCourse", "contributors": ["balax85"], "subscribers_count": 1, "stargazers_count": 0, "id": 44045636}
-{"issues_count": 54, "name": "apache/giraph", "contributors": ["aching", "jghoman", "edunov", "ikabiljo", "ereisman", "pavanka", "claudiomartella", "rvs", "heslami", "nitay", "hyunsik", "dlogothetis", "omalley", "tybulut", "xslogic", "jakemannix", "KidEinstein", "lewismc", "mpundir", "neggert", "sagiba", "yukselakinci", "yschimke"], "subscribers_count": 70, "stargazers_count": 432, "id": 2282376}
+{"issues_count": 54, "name": "apache/giraph", "contributors": ["aching", "jghoman", "edunov", "ikabiljo", "ereisman", "pavanka", "claudiomartella", "rvs", "heslami", "nitay", "hyunsik", "dlogothetis", "omalley", "tybulut", "xslogic", "jakemannix", "KidEinstein", "lewismc", "mpundir", "neggert", "sagiba", "yukselakinci", "yschimke"], "subscribers_count": 70, "stargazers_count": 433, "id": 2282376}
 {"issues_count": 0, "name": "ksarkar/InfluenceMaximization_Giraph", "contributors": ["ksarkar"], "subscribers_count": 0, "stargazers_count": 0, "id": 6051855}
 {"issues_count": 0, "name": "Zijiao/Java", "contributors": ["Zijiao"], "subscribers_count": 1, "stargazers_count": 0, "id": 80462832}
 {"issues_count": 0, "name": "andremota/Distributed-Graph-Processing", "contributors": ["Nashuim", "andremota"], "subscribers_count": 2, "stargazers_count": 1, "id": 26325749}
@@ -121,9 +125,9 @@
 {"issues_count": 0, "name": "mbauer14/biggraph", "contributors": ["mbauer14"], "subscribers_count": 3, "stargazers_count": 2, "id": 46765307}
 {"issues_count": 1, "name": "citlab/graph", "contributors": ["gkreyssing", "dalxo", "flohannes", "ajossifov", "pbittner", "MarcusSellmann", "sils"], "subscribers_count": 13, "stargazers_count": 1, "id": 27866263}
 {"issues_count": 0, "name": "royveshovda/cloudapp_course", "contributors": ["royveshovda"], "subscribers_count": 1, "stargazers_count": 0, "id": 41621157}
-{"issues_count": 0, "name": "obsicn/bigdata", "contributors": ["obsicn"], "subscribers_count": 1, "stargazers_count": 0, "id": 98718358}
 {"issues_count": 0, "name": "see-sharp-dev/coursera-cloud-applications", "contributors": ["see-sharp-dev"], "subscribers_count": 1, "stargazers_count": 0, "id": 52822648}
 {"issues_count": 0, "name": "sunbaoshi1975/MyStudy", "contributors": ["sunbaoshi1975"], "subscribers_count": 2, "stargazers_count": 0, "id": 16640345}
+{"issues_count": 0, "name": "obsicn/bigdata", "contributors": ["obsicn"], "subscribers_count": 1, "stargazers_count": 0, "id": 98718358}
 {"issues_count": 0, "name": "EngAAlex/GraphRay", "contributors": ["EngAAlex"], "subscribers_count": 1, "stargazers_count": 0, "id": 99941202}
 {"issues_count": 0, "name": "mmaro/giraph", "contributors": ["aching", "jghoman", "ereisman", "hyunsik", "nitay", "omalley", "xslogic", "claudiomartella", "jakemannix", "mmaro"], "subscribers_count": 1, "stargazers_count": 0, "id": 11502101}
 {"issues_count": 1, "name": "vinaygoel/archive-analysis", "contributors": ["vinaygoel", "vinaygo"], "subscribers_count": 10, "stargazers_count": 17, "id": 13424079}
@@ -134,6 +138,7 @@
 {"issues_count": 0, "name": "Hanmourang/hiped2", "contributors": ["alexholmes", "Hanmourang"], "subscribers_count": 1, "stargazers_count": 3, "id": 45738248}
 {"issues_count": 0, "name": "apenella/coursera", "contributors": ["apenella"], "subscribers_count": 1, "stargazers_count": 0, "id": 42104828}
 {"issues_count": 0, "name": "willzxd/bfm", "contributors": [], "subscribers_count": 2, "stargazers_count": 0, "id": 33273168}
+{"issues_count": 1, "name": "Sotera/page-rank", "contributors": ["jonathanostinowsky", "patricktgill"], "subscribers_count": 11, "stargazers_count": 5, "id": 13102335}
 {"issues_count": 0, "name": "ffaghri1/cloudapp-giraph-tutorial", "contributors": ["ffaghri1"], "subscribers_count": 2, "stargazers_count": 0, "id": 42795152}
 {"issues_count": 0, "name": "lifuzu/cloudapp-mp5", "contributors": ["xldrx", "lifuzu"], "subscribers_count": 1, "stargazers_count": 0, "id": 43529935}
 {"issues_count": 0, "name": "lzl1024/playingCloudApp", "contributors": [], "subscribers_count": 1, "stargazers_count": 0, "id": 42288248}
@@ -174,25 +179,26 @@
 {"issues_count": 1, "name": "Sotera/leaf-compression", "contributors": ["jonathanostinowsky"], "subscribers_count": 11, "stargazers_count": 2, "id": 13102521}
 {"issues_count": 1, "name": "simon0227/dgraph", "contributors": ["simon0227"], "subscribers_count": 1, "stargazers_count": 0, "id": 43741214}
 {"issues_count": 0, "name": "2nd-metaman/sa-rdf-giraph", "contributors": ["2nd-metaman"], "subscribers_count": 2, "stargazers_count": 2, "id": 3790579}
-{"issues_count": 0, "name": "warwicksna/giraph-algorithms", "contributors": ["cranman"], "subscribers_count": 0, "stargazers_count": 2, "id": 4156785}
 {"issues_count": 0, "name": "wangqianbo/bysj-ada-main", "contributors": ["wangqianbo"], "subscribers_count": 1, "stargazers_count": 0, "id": 31932279}
+{"issues_count": 0, "name": "warwicksna/giraph-algorithms", "contributors": ["cranman"], "subscribers_count": 0, "stargazers_count": 2, "id": 4156785}
 {"issues_count": 0, "name": "hafizur-rahman/algo-memo", "contributors": ["hafizur-rahman"], "subscribers_count": 0, "stargazers_count": 3, "id": 6278352}
 {"issues_count": 19, "name": "bouke-nederstigt/webdatamanagement", "contributors": ["bouke-nederstigt", "senabhishek", "an3m0na"], "subscribers_count": 3, "stargazers_count": 0, "id": 19274408}
 {"issues_count": 0, "name": "wosiu/Giraph-finding-triangles", "contributors": ["wosiu"], "subscribers_count": 1, "stargazers_count": 0, "id": 37943542}
 {"issues_count": 0, "name": "demarna1/JHUApacheGiraph", "contributors": ["demarna1"], "subscribers_count": 1, "stargazers_count": 0, "id": 48090025}
 {"issues_count": 0, "name": "ud12de/Giraph_project", "contributors": ["ud12de"], "subscribers_count": 1, "stargazers_count": 0, "id": 19799840}
 {"issues_count": 0, "name": "ailtoncsf/giraph-hadoop-graph", "contributors": ["ailtoncsf"], "subscribers_count": 1, "stargazers_count": 0, "id": 72546569}
-{"issues_count": 0, "name": "mmajews/SP-R-Kleene-Floyd-Warshall", "contributors": ["Marsuz", "mmajews"], "subscribers_count": 2, "stargazers_count": 0, "id": 75878657}
 {"issues_count": 0, "name": "janlugt/gm_apps", "contributors": ["janlugt"], "subscribers_count": 1, "stargazers_count": 1, "id": 8050570}
+{"issues_count": 0, "name": "mmajews/SP-R-Kleene-Floyd-Warshall", "contributors": ["Marsuz", "mmajews"], "subscribers_count": 2, "stargazers_count": 0, "id": 75878657}
 {"issues_count": 0, "name": "alex9311/Web-Data-Management", "contributors": ["alex9311", "PetervB"], "subscribers_count": 2, "stargazers_count": 0, "id": 35478497}
 {"issues_count": 0, "name": "pramodschavan/BigDataInfrastructure-Project", "contributors": ["nkher"], "subscribers_count": 1, "stargazers_count": 1, "id": 37339747}
 {"issues_count": 0, "name": "lufenghuan/giraph", "contributors": ["lufenghuan"], "subscribers_count": 1, "stargazers_count": 1, "id": 14625490}
 {"issues_count": 0, "name": "smly/giraph-classifier", "contributors": ["smly"], "subscribers_count": 3, "stargazers_count": 11, "id": 2546696}
-{"issues_count": 0, "name": "JKArena/pulsing", "contributors": ["JKArena"], "subscribers_count": 1, "stargazers_count": 2, "id": 56704244}
-{"issues_count": 2, "name": "castagna/jena-grande", "contributors": ["castagna"], "subscribers_count": 9, "stargazers_count": 24, "id": 3983582}
 {"issues_count": 0, "name": "nosrepus/giraph-graph-isomorphism", "contributors": ["nosrepus"], "subscribers_count": 1, "stargazers_count": 0, "id": 54933052}
+{"issues_count": 2, "name": "castagna/jena-grande", "contributors": ["castagna"], "subscribers_count": 9, "stargazers_count": 24, "id": 3983582}
+{"issues_count": 0, "name": "JKArena/pulsing", "contributors": ["JKArena"], "subscribers_count": 1, "stargazers_count": 2, "id": 56704244}
 {"issues_count": 22, "name": "atlarge-research/graphalytics-platforms-giraph", "contributors": ["thegeman", "wlngai", "stijnh", "mihaic", "chrislemaire", "alexandru-uta"], "subscribers_count": 8, "stargazers_count": 1, "id": 35171743}
 {"issues_count": 0, "name": "stt12581/giraph_project", "contributors": ["stt12581"], "subscribers_count": 1, "stargazers_count": 0, "id": 55324135}
+{"issues_count": 0, "name": "yafeichang/thesis", "contributors": [], "subscribers_count": 1, "stargazers_count": 0, "id": 69420245}
 {"issues_count": 0, "name": "zmyer/hgraphdb", "contributors": ["rayokota", "mbrukman"], "subscribers_count": 1, "stargazers_count": 0, "id": 111642351}
 {"issues_count": 0, "name": "dut3062796s/hgraphdb", "contributors": ["rayokota", "mbrukman"], "subscribers_count": 1, "stargazers_count": 0, "id": 111482542}
 {"issues_count": 0, "name": "hefei1986/hgraphdb", "contributors": ["rayokota", "mbrukman"], "subscribers_count": 1, "stargazers_count": 0, "id": 111087505}
@@ -660,6 +666,8 @@
 {"issues_count": 0, "name": "aalsum/archive-analysis", "contributors": ["vinaygoel", "vinaygo"], "subscribers_count": 0, "stargazers_count": 0, "id": 20675832}
 {"issues_count": 0, "name": "sheilazpy/Java", "contributors": ["pliu"], "subscribers_count": 0, "stargazers_count": 0, "id": 26893762}
 {"issues_count": 0, "name": "sytshanli/hiped2", "contributors": ["alexholmes", "Hanmourang"], "subscribers_count": 1, "stargazers_count": 0, "id": 58017212}
+{"issues_count": 0, "name": "atomicjets/page-rank", "contributors": ["jonathanostinowsky", "patricktgill"], "subscribers_count": 1, "stargazers_count": 0, "id": 92514894}
+{"issues_count": 0, "name": "zzmjohn/page-rank", "contributors": ["patricktgill"], "subscribers_count": 1, "stargazers_count": 0, "id": 16544137}
 {"issues_count": 0, "name": "mdautrey/cloudapp-giraph-tutorial", "contributors": ["ffaghri1", "mdautrey"], "subscribers_count": 1, "stargazers_count": 0, "id": 43870871}
 {"issues_count": 0, "name": "mahanteshsc/cloudapp-giraph-tutorial", "contributors": ["ffaghri1"], "subscribers_count": 1, "stargazers_count": 0, "id": 43789439}
 {"issues_count": 0, "name": "yzheng624/cloudapp-giraph-tutorial", "contributors": ["ffaghri1"], "subscribers_count": 1, "stargazers_count": 0, "id": 43466839}

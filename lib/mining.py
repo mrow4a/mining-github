@@ -40,7 +40,7 @@ class Miner:
                     break
                 for issue in page:
                     count = count +1
-                time.sleep(0.1)
+                time.sleep(0.73)
             except Exception as e:
                 print e
 
@@ -58,7 +58,7 @@ class Miner:
                     break
                 for contrib in page:
                     contribs.append(contrib.login)
-                time.sleep(0.1)
+                time.sleep(0.73)
             except Exception as e:
                 print e
 
@@ -76,7 +76,7 @@ class Miner:
                     break
                 for fork in page:
                     forks.append(fork)
-                time.sleep(0.1)
+                time.sleep(0.73)
             except Exception as e:
                 print e
 
