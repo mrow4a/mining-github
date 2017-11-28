@@ -82,14 +82,17 @@ class Miner:
 
         return forks
 
-    def __write_results(self, paged_results, outid):
+    def __write_results(self, paged_results, outid, filtered):
         outputfile = self.__get_output_for_id(outid)
         file = open(outputfile, 'a')
 
         to_visit = Queue.Queue()
         for res in paged_results:
+            if res.repository.full_name in filtered:
+                print "Skipping due to filtering: ", res.repository.id, res.repository.full_name
+                continue
             to_visit.put(res.repository.id)
-            print res.repository.id
+            print res.repository.id, res.repository.full_name
             time.sleep(0.1)
 
         filtered_out = 0
@@ -102,6 +105,8 @@ class Miner:
                 print "Fetch ", repo_id
                 try:
                     res = self.auth.get_repo(repo_id)
+
+
                     forks = self.get_forks(res)
                     for fork in forks:
                         to_visit.put(fork.id)
@@ -128,7 +133,7 @@ class Miner:
 
         print "WROTE URLS TO %s"%(outputfile)
 
-    def get_repos_for_keyword(self, keyword, languages, id):
+    def get_repos_for_keyword(self, keyword, languages, filtered, id):
         # Validate languages are supported
         for language in languages:
             if (language not in [self.JAVA, self.SCALA, self.PYTHON, self.CPLUS]):
@@ -145,4 +150,4 @@ class Miner:
             paged_results = self.auth.search_code(
                 escaped_keyword, language=language
             )
-            self.__write_results(paged_results, id)
+            self.__write_results(paged_results, id, filtered)

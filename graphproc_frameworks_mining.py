@@ -56,6 +56,7 @@ def main(argv):
         miner.get_repos_for_keyword(
             "import org.apache.flink.graph",
             [miner.JAVA, miner.SCALA],
+            ["apache/flink"],
             "gelly"
         )
     if framework == "graphx" or framework == "all":
@@ -65,11 +66,13 @@ def main(argv):
         miner.get_repos_for_keyword(
             "import org.apache.spark.graphx",
             [miner.JAVA, miner.SCALA],
+            ["apache/spark"],
             "graphx"
         )
         miner.get_repos_for_keyword(
             "import org.apache.spark.graphx.GraphLoader",
             [miner.SCALA],
+            ["apache/spark"],
             "graphx"
         )
     if framework == "giraph" or framework == "all":
@@ -79,6 +82,7 @@ def main(argv):
         miner.get_repos_for_keyword(
             "import org.apache.giraph.graph",
             [miner.JAVA, miner.SCALA],
+            ["apache/giraph"],
             "giraph"
         )
     if framework == "tinkerpop" or framework == "all":
@@ -88,16 +92,19 @@ def main(argv):
         miner.get_repos_for_keyword(
             "import org.apache.tinkerpop.gremlin.process.traversal.dsl.graph",
             [miner.JAVA, miner.SCALA],
+            ["apache/tinkerpop"],
             "tinkerpop"
         )
         miner.get_repos_for_keyword(
             "import org.apache.tinkerpop.gremlin.structure.io.graphml",
             [miner.JAVA, miner.SCALA],
+            ["apache/tinkerpop"],
             "tinkerpop"
         )
         miner.get_repos_for_keyword(
             "import org.apache.tinkerpop.gremlin.structure.Graph",
             [miner.JAVA, miner.SCALA],
+            ["apache/tinkerpop"],
             "tinkerpop"
         )
     if framework == "arabesque" or framework == "all":
@@ -107,6 +114,7 @@ def main(argv):
         miner.get_repos_for_keyword(
             "import io.arabesque",
             [miner.JAVA, miner.SCALA],
+            ["qcri/Arabesque"],
             "arabesque"
         )
     if framework == "goffish" or framework == "all":
@@ -116,6 +124,7 @@ def main(argv):
         miner.get_repos_for_keyword(
             "import in.dream_lab.goffish",
             [miner.JAVA],
+            ["dream-lab/goffish_v3"],
             "goffish"
         )
     if framework == "graphlab" or framework == "all":
@@ -125,21 +134,25 @@ def main(argv):
         miner.get_repos_for_keyword(
             "import graphlab.graph",
             [miner.JAVA, miner.SCALA],
+            ["jegonzal/PowerGraph", "turi-code/SFrame", "turi-code/GraphLab-Create-SDK"],
             "graphlab"
         )
         miner.get_repos_for_keyword(
             "from graphlab import SGraph",
             [miner.PYTHON],
+            ["jegonzal/PowerGraph", "turi-code/SFrame", "turi-code/GraphLab-Create-SDK"],
             "graphlab"
         )
         miner.get_repos_for_keyword(
             "graphlab.SGraph",
             [miner.PYTHON],
+            ["jegonzal/PowerGraph", "turi-code/SFrame", "turi-code/GraphLab-Create-SDK"],
             "graphlab"
         )
         miner.get_repos_for_keyword(
             "<graphlab.hpp>",
             [miner.CPLUS],
+            ["jegonzal/PowerGraph", "turi-code/SFrame", "turi-code/GraphLab-Create-SDK"],
             "graphlab"
         )
 
