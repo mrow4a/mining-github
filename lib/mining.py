@@ -102,10 +102,14 @@ class Miner:
             if not repo_id in self.repos:
                 self.repos.add(repo_id)
 
-                print "Fetch ", repo_id
                 try:
                     res = self.auth.get_repo(repo_id)
 
+                    if res.full_name in filtered:
+                        print "Skipping due to filtering: ", res.id, res.full_name
+                        continue
+                    else:
+                        print "Fetch ", repo_id, res.full_name
 
                     forks = self.get_forks(res)
                     for fork in forks:

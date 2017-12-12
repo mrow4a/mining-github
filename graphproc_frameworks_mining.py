@@ -11,7 +11,7 @@ import os
 
 def print_help():
     print ('Please supply with Github username and password, and optionaly --cleanrun flag to reset result for framework')
-    print ('./graphproc_frameworks_mining.py -u <username> -d <password> [all/gelly/graphx/giraph/tinkerpop/arabesque/graphlab]')
+    print ('./graphproc_frameworks_mining.py -u <username> -d <password> [all/gelly/graphx/giraph/tinkerpop/tinkerpop-filter/arabesque/graphlab]')
     print ('./graphproc_frameworks_mining.py -u foo -d foopass gelly')
     print ('./graphproc_frameworks_mining.py gelly')
     print ('./graphproc_frameworks_mining.py --cleanrun gelly')
@@ -106,6 +106,28 @@ def main(argv):
             [miner.JAVA, miner.SCALA],
             ["apache/tinkerpop"],
             "tinkerpop"
+        )
+    if framework == "tinkerpop-filter" or framework == "all":
+        if clean:
+            miner.clear_results("tinkerpop-filter")
+
+        miner.get_repos_for_keyword(
+            "import org.apache.tinkerpop.gremlin.process.traversal.dsl.graph",
+            [miner.JAVA, miner.SCALA],
+            ["apache/tinkerpop", "clojurewerkz/ogre", "mpollmeier/gremlin-scala", "blazegraph/tinkerpop3", "Azure/azure-cosmosdb-spark", "MartinHaeusler/chronos", "datastax/java-dse-graph", "graknlabs/grakn", "apache/incubator-s2graph", "rayokota/hgraphdb", "awslabs/dynamodb-janusgraph-storage-backend", "graknlabs/janusgraph", "classmethod/tupl-titan-storage-backend", "thinkaurelius/titan", "unipop-graph/unipop", "pietermartin/sqlg", "orientechnologies/orientdb-gremlin", "HuygensING/timbuctoo", "rmagen/elastic-gremlin", "JanusGraph/janusgraph"],
+            "tinkerpop-filter"
+        )
+        miner.get_repos_for_keyword(
+            "import org.apache.tinkerpop.gremlin.structure.io.graphml",
+            [miner.JAVA, miner.SCALA],
+            ["apache/tinkerpop", "clojurewerkz/ogre", "mpollmeier/gremlin-scala", "blazegraph/tinkerpop3", "Azure/azure-cosmosdb-spark", "MartinHaeusler/chronos", "datastax/java-dse-graph", "graknlabs/grakn", "apache/incubator-s2graph", "rayokota/hgraphdb", "awslabs/dynamodb-janusgraph-storage-backend", "graknlabs/janusgraph", "classmethod/tupl-titan-storage-backend", "thinkaurelius/titan", "unipop-graph/unipop", "pietermartin/sqlg", "orientechnologies/orientdb-gremlin", "HuygensING/timbuctoo", "rmagen/elastic-gremlin", "JanusGraph/janusgraph"],
+            "tinkerpop-filter"
+        )
+        miner.get_repos_for_keyword(
+            "import org.apache.tinkerpop.gremlin.structure.Graph",
+            [miner.JAVA, miner.SCALA],
+            ["apache/tinkerpop", "clojurewerkz/ogre", "mpollmeier/gremlin-scala", "blazegraph/tinkerpop3", "Azure/azure-cosmosdb-spark", "MartinHaeusler/chronos", "datastax/java-dse-graph", "graknlabs/grakn", "apache/incubator-s2graph", "rayokota/hgraphdb", "awslabs/dynamodb-janusgraph-storage-backend", "graknlabs/janusgraph", "classmethod/tupl-titan-storage-backend", "thinkaurelius/titan", "unipop-graph/unipop", "pietermartin/sqlg", "orientechnologies/orientdb-gremlin", "HuygensING/timbuctoo", "rmagen/elastic-gremlin", "JanusGraph/janusgraph"],
+            "tinkerpop-filter"
         )
     if framework == "arabesque" or framework == "all":
         if clean:
